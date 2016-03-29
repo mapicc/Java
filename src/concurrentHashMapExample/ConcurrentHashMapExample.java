@@ -16,6 +16,7 @@ public class ConcurrentHashMapExample {
 		myMap.put("4", "1");
 		myMap.put("5", "1");
 		myMap.put("6", "1");
+//		myMap.put("7", null);
 		System.out.println("ConcurrentHashMap before iterator: "+myMap);
 		Iterator<String> it=myMap.keySet().iterator();
 		while(it.hasNext()){
@@ -32,12 +33,13 @@ public class ConcurrentHashMapExample {
 		myMap.put("4", "1");
 		myMap.put("5", "1");
 		myMap.put("6", "1");
+		myMap.put(null, "1");
 		System.out.println("HashMap before iterator: "+myMap);
 		Iterator<String> it1=myMap.keySet().iterator();
 		while(it1.hasNext()){
 			String key=it1.next();
-			if(key.equals("3"))
-				myMap.put(key+"new", "new3");
+//			if(key.equals("3"))
+//				myMap.put(key+"new", "new3");
 		}
 		System.out.println("HashMap after iterator: "+myMap);
 		
