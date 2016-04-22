@@ -4,6 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class Reflect {
+	
 	public int Solution(int a[]){
 		return 1;
 	}
@@ -34,8 +35,10 @@ public class Reflect {
 		Method m;
 		Object ret = null;
 		try {
-			System.out.println(s.getDeclaredMethods()[2]);
-			m = s.getMethod("Solution", new Class[]{int.class});
+//			s.getDeclaredMethods()获得当前类的所有方法（包括私有方法），不能获得其他类的私有方法
+//			s.getMethods()获得当前类的所有方法以及继承类的共有方法
+			//System.out.println(s.getDeclaredMethods()[1]);
+			m = s.getMethod("Solution", new Class[]{int[].class});
 			try {
 				ret = m.invoke(t, a);
 			} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
