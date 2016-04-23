@@ -1,5 +1,6 @@
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.LinkedList;
 
 public class smallestNumberOfArray {
 	
@@ -8,14 +9,14 @@ public class smallestNumberOfArray {
 			return -1;
 		int i = 0;
 		int j = a.length-1;
-		while(i<=j){
+		while(i != j-1){
 			int mid = (i+j)/2;
-			if(a[mid]>=a[i])
-				i = mid+1;
+			if(a[mid]>a[i])
+				i = mid;
 			else
-				j = mid-1;
+				j = mid;
 		}
-		return i;
+		return a[j];
 	}
 
 	public static void main(String[] args) throws Exception {
