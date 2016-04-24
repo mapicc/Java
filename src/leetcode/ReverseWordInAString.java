@@ -38,11 +38,26 @@ public class ReverseWordInAString {
 		}
 		return ret.toString();
 	}
-
+	
+	public static String bestMethod(String s){
+		String[] t = s.trim().split(" ");
+		StringBuffer sb = new StringBuffer();
+		for(int i=t.length-1;i>=0;i--){
+			if(t[i].isEmpty())
+				continue;
+			sb.append(t[i]);
+			if(i>0){
+				sb.append(" ");
+			}
+		}
+		return sb.toString();
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String s = "  the sky     is blue";
 		System.out.println(reverseWords(s));
+		System.out.println(bestMethod(s));
 	}
 
 }
