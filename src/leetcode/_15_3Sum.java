@@ -2,9 +2,7 @@ package leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -12,10 +10,10 @@ import java.util.Map;
 public class _15_3Sum {
 	
 	//时间超过限制
-	public static List<List<Integer>> threeSum(int tmp[]){
-		if(tmp.length <= 3)
+	public static List<List<Integer>> threeSum(int nums[]){
+		if(nums.length <= 3)
 			return null;
-		int tmp[] = Arrays.copyOf(tmp, tmp.length);
+		int tmp[] = Arrays.copyOf(nums, nums.length);
 		Arrays.sort(tmp);
 		List<List<Integer>> ret = new ArrayList<List<Integer>>();
 		for(int i = 0;i < tmp.length;i ++){
@@ -44,14 +42,14 @@ public class _15_3Sum {
 	}
 	
 	//依旧超时
-	public static List<List<Integer>> threeSum_2(int tmp[]){
-		int n = tmp.length;
+	public static List<List<Integer>> threeSum_2(int nums[]){
+		int n = nums.length;
 		List<List<Integer>> list = new ArrayList<List<Integer>>();
 		if(n < 3)
 			return list;
 		int i = 0;
 
-		int tmp[] = Arrays.copyOf(tmp, n);
+		int tmp[] = Arrays.copyOf(nums, n);
 		Arrays.sort(tmp);
 		
 		while(i < n - 2){
@@ -80,7 +78,7 @@ public class _15_3Sum {
 		return list;
 	}
 	
-	//Accept
+	//
 	public static List<List<Integer>> threeSum_3(int nums[]){
 		List<List<Integer>> list = new ArrayList<>();
 		int n = nums.length;
