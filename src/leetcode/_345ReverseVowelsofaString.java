@@ -3,7 +3,7 @@ package leetcode;
 public class _345ReverseVowelsofaString {
 
 	public static String reverseVowels(String s) {
-		//try 2
+		//zhaoguanjun@172.28.50.35
 		if(s == null)
 			return s;
 		int i = 0, j = s.length() - 1;
@@ -19,7 +19,7 @@ public class _345ReverseVowelsofaString {
 					i++;
 				}else
 				    j--;
-			}else{  
+			}else{   
 			    i++;
 			}
 		} 
