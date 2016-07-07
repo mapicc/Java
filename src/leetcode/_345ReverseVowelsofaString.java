@@ -19,7 +19,7 @@ public class _345ReverseVowelsofaString {
 					i++;
 				}else
 				    j--;
-			}else{   
+			}else{    
 			    i++;
 			}
 		} 
