@@ -16,6 +16,7 @@ public class NIOTest {
 		ByteBuffer buffer = ByteBuffer.allocate(48);
 		RandomAccessFile f = new RandomAccessFile("/file.txt", "rw");
 		FileChannel in = f.getChannel();
+
 		int bytesRead = in.read(buffer);
 	}
 
