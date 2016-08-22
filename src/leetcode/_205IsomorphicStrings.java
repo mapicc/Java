@@ -21,6 +21,21 @@ public class _205IsomorphicStrings {
         }
         return true;
     }
+
+    public boolean isIsomorphic2(String s, String t) {
+        int[] sAddr = new int[256];
+        int[] tAddr = new int[256];
+        for (int i = 0; i < s.length(); i++) {
+            if (sAddr[s.charAt(i)] != tAddr[t.charAt(i)])
+                return false;
+            else if (sAddr[s.charAt(i)] == 0) {
+                sAddr[s.charAt(i)] = i + 1;
+                tAddr[t.charAt(i)] = i + 1;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         System.out.println(isIsomorphic("ab", "aa"));
     }
