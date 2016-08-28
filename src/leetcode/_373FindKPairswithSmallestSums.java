@@ -9,7 +9,6 @@ import java.util.Queue;
  * Created by zhaoguanjun on 2016/8/28.
  */
 public class _373FindKPairswithSmallestSums {
-    public List<int[]> kSmallestPairs(int[] nums1, int[] nums2, int k) {
         public List<int[]> kSmallestPairs(int[] nums1, int[] nums2, int k) {
             List<int[]> ret = new ArrayList<>();
             if (nums1.length == 0 || nums2.length == 0)
@@ -34,7 +33,6 @@ public class _373FindKPairswithSmallestSums {
 
 
     }
-}
 
 class Node implements Comparable<Node> {
     int x, y, val;
