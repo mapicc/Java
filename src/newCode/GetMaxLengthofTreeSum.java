@@ -39,6 +39,6 @@ public class GetMaxLengthofTreeSum {
         root.right.left = new TreeNode(5);
         root.right.right = new TreeNode(7);
 
-        System.out.println(getMaxLength(root, 4));
+        System.out.println(getMaxLength(root, 3));
     }
 }
