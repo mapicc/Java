@@ -29,6 +29,32 @@ public class MorrisTree {
         }
     }
 
+    public static void morrisPre(TreeNode root) {
+        if (root == null)
+            return;
+        TreeNode pNode = root;
+        TreeNode cur = null;
+        while (pNode != null) {
+            cur = pNode.left;
+            if (cur != null) {
+                while (cur.right != null && cur.right != pNode) {
+                    cur = cur.right;
+                }
+                if (cur.right == null) {
+                    cur.right = pNode;
+                    System.out.print(pNode.value + " ");
+                    pNode = pNode.left;
+                    continue;
+                }
+                else {
+                    cur.right = null;
+                }
+            }else
+                System.out.print(pNode.value + " ");
+            pNode = pNode.right;
+        }
+    }
+
     public static void main(String[] args) {
         TreeNode root = new TreeNode(4);
         root.left = new TreeNode(2);
@@ -40,6 +66,9 @@ public class MorrisTree {
 
         //中序遍历
         morrisIn(root);
+
+        //先序遍历
+        morrisPre(root);
 
     }
 }
