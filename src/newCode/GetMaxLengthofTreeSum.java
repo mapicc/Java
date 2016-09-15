@@ -23,6 +23,8 @@ public class GetMaxLengthofTreeSum {
             map.put(cur, level);
         max = preOrder(root.left, cur, level + 1, max, sum, map);
         max = preOrder(root.right, cur, level + 1, max, sum, map);
+
+        //返回父节点时，将孩子节点记录删除
         if (level == map.get(cur))
             map.remove(cur);
         return max;
