@@ -67,6 +67,7 @@ public class PrintTreeByLevel {
         //层序遍历二叉树
         printTreeByLevel(root);
 
+
         //带层编号的层序遍历
         printTreeByLevel2(root);
     }
