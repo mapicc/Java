@@ -4,6 +4,7 @@ package leetcode;
  * Created by zhaoguanjun on 2016/9/17.
  */
 public class _397IntegerReplacement {
+
     public int integerReplacement(int n) {
         long N = n;
         int count = 0;
