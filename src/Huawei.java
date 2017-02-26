@@ -10,6 +10,7 @@ public class Huawei {
             String str = scanner.nextLine().trim();
             int ind = str.lastIndexOf(' ');
             System.out.println(str.length() - ind - 1);
+
         }
     }
 }
